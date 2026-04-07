@@ -62,15 +62,25 @@ const t = {
     navIssues:'выпуски', navGuidance:'гайд', navAbout:'о нас', navSubmit:'подать', langBtn:'EN',
   }
 };
-let currentLang = 'en';
+let currentLang = localStorage.getItem('rd_lang') || 'en';
+// If language already chosen, skip splash
+if (localStorage.getItem('rd_lang')) {
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('lang-splash').style.display = 'none';
+    document.getElementById('main-site').style.display = 'block';
+    applyLang(currentLang);
+  });
+}
 function setLang(lang) {
   currentLang = lang;
+  localStorage.setItem('rd_lang', lang);
   document.getElementById('lang-splash').style.display = 'none';
   document.getElementById('main-site').style.display = 'block';
   applyLang(lang);
 }
 function toggleLang() {
   currentLang = currentLang === 'en' ? 'ru' : 'en';
+  localStorage.setItem('rd_lang', currentLang);
   applyLang(currentLang);
 }
 function applyLang(lang) {
