@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>404 — Raft & Draft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Inter',sans-serif;background:#daeef9;color:#1a2a3a;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;}
+    .nav{position:fixed;top:0;left:0;right:0;background:#e8f3fb;border-bottom:1px solid #c5dff0;padding:0 2.5rem;height:56px;display:flex;align-items:center;justify-between;}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:20px;color:#2a6496;text-decoration:none;}
+    .nav-logo span{font-style:italic;color:#4a9bc8;}
+    .container{display:flex;flex-direction:column;align-items:center;gap:1.5rem;max-width:480px;}
+    .num{font-family:'Playfair Display',serif;font-size:96px;font-weight:400;color:#2a6496;line-height:1;opacity:0.8;}
+    .title{font-family:'Playfair Display',serif;font-size:26px;color:#1a3a52;line-height:1.3;}
+    .title em{color:#4a9bc8;font-style:italic;}
+    .desc{font-size:14px;color:#5a849e;line-height:1.7;font-weight:300;}
+    .btn{background:#3a8fc4;color:white;border:none;padding:11px 28px;border-radius:30px;font-size:13px;font-weight:500;text-decoration:none;display:inline-block;margin-top:0.5rem;}
+    .btn:hover{background:#2a7fb4;}
+    .wave{position:fixed;bottom:0;left:0;width:100%;pointer-events:none;}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Raft <span>&</span> Draft</a>
+</nav>
+
+<div class="container">
+  <svg width="180" height="160" viewBox="0 0 180 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M30 50 Q35 43 40 50" stroke="#91c8e4" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M44 38 Q49 31 54 38" stroke="#91c8e4" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <path d="M140 35 Q145 28 150 35" stroke="#91c8e4" stroke-width="1.5" fill="none" opacity="0.45"/>
+    <path d="M155 50 Q159 44 163 50" stroke="#b5d9ee" stroke-width="1.3" fill="none" opacity="0.35"/>
+    <circle cx="155" cy="22" r="14" fill="#c8e4f5" opacity="0.45"/>
+    <circle cx="155" cy="22" r="8" fill="#b5d9ee" opacity="0.4"/>
+    <line x1="90" y1="105" x2="90" y2="45" stroke="#8b6f5e" stroke-width="2.5"/>
+    <line x1="90" y1="97" x2="130" y2="88" stroke="#8b6f5e" stroke-width="1.5"/>
+    <path d="M90 49 L90 97 L130 85 Z" fill="#b5d9ee" stroke="#7ab4cc" stroke-width="1"/>
+    <path d="M90 52 L90 80 L58 70 Z" fill="#c8e6f5" stroke="#91c8e4" stroke-width="1"/>
+    <path d="M90 45 L90 52 L98 48.5 Z" fill="#3a8fc4"/>
+    <rect x="63" y="102" width="54" height="5" rx="1.5" fill="#c4a882"/>
+    <path d="M54 107 Q59 122 90 125 Q121 122 126 107 Z" fill="#3a8fc4"/>
+    <path d="M10 128 Q40 120 70 128 Q100 136 120 128 Q148 120 170 128" stroke="#7ab4cc" stroke-width="1.8" fill="none" opacity="0.6"/>
+    <path d="M0 138 Q35 130 65 138 Q95 146 120 138 Q148 130 180 138" stroke="#91c8e4" stroke-width="1.3" fill="none" opacity="0.45"/>
+    <path d="M0 148 Q45 142 90 145 Q135 148 180 143 L180 160 L0 160 Z" fill="#fdf0b0" opacity="0.4"/>
+  </svg>
+
+  <div class="num">404</div>
+  <div class="title">This page got<br>lost at <em>sea</em></div>
+  <p class="desc">Looks like the page you were looking for drifted away. Let's get you back to shore.</p>
+  <a href="index.html" class="btn">Back to the raft →</a>
+</div>
+
+<svg class="wave" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 30 Q180 10 360 30 Q540 50 720 30 Q900 10 1080 30 Q1260 50 1440 30 L1440 60 L0 60 Z" fill="#c8e4f5" opacity="0.4"/>
+</svg>
+</body>
+</html>
