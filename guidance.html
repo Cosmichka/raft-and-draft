@@ -202,6 +202,49 @@
 </div>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function applyLang(lang) {
+  const isRu = lang === 'ru';
+  document.getElementById('lang-btn').textContent = isRu ? 'EN' : 'RU';
+  document.getElementById('page-tag').textContent = isRu ? 'как подать работу' : 'submission guidelines';
+  document.getElementById('page-title').innerHTML = isRu ? 'Как <em>подать</em>' : 'How to <em>submit</em>';
+  document.getElementById('g-title-1').innerHTML = isRu ? 'Что мы <em>ищем</em>' : "What we're <em>looking for</em>";
+  document.getElementById('g-title-2').innerHTML = isRu ? 'Что мы <em>принимаем</em>' : 'What we <em>accept</em>';
+  document.getElementById('g-title-3').innerHTML = isRu ? 'Что мы <em>не принимаем</em>' : "What we <em>don't</em> accept";
+  document.getElementById('g-title-4').innerHTML = isRu ? '<em>Одновременные</em> подачи' : '<em>Simultaneous</em> submissions';
+  document.getElementById('g-title-5').innerHTML = isRu ? 'Как это <em>работает</em>' : 'How it <em>works</em>';
+  document.getElementById('g-title-policy').innerHTML = isRu ? 'Политика <em>журнала</em>' : 'Journal <em>policy</em>';
+  ['1','2','3','4','5'].forEach(function(n) {
+    document.getElementById('g-body-'+n+'-en').style.display = isRu ? 'none' : 'block';
+    document.getElementById('g-body-'+n+'-ru').style.display = isRu ? 'block' : 'none';
+  });
+  document.getElementById('g-body-policy-en').style.display = isRu ? 'none' : 'block';
+  document.getElementById('g-body-policy-ru').style.display = isRu ? 'block' : 'none';
+  document.getElementById('spec-prose-label').textContent = isRu ? 'Проза' : 'Prose';
+  document.getElementById('spec-prose-limit').textContent = isRu ? 'до 5 000 слов' : 'up to 5,000 words';
+  document.getElementById('spec-poetry-label').textContent = isRu ? 'Поэзия' : 'Poetry';
+  document.getElementById('spec-poetry-limit').textContent = isRu ? 'до 60 строк' : 'up to 60 lines';
+  document.getElementById('spec-script-label').textContent = isRu ? 'Сценарий' : 'Screenwriting';
+  document.getElementById('spec-script-limit').textContent = isRu ? 'до 10 страниц' : 'up to 10 pages';
+  document.getElementById('cta-title').textContent = isRu ? 'Готов подать работу?' : 'Ready to submit?';
+  document.getElementById('cta-desc').textContent = isRu ? 'Заполни форму и поделись своей работой с нами.' : 'Fill out the form and share your work with us.';
+  document.getElementById('cta-btn').textContent = isRu ? 'Подать работу →' : 'Submit now →';
+  document.getElementById('footer-desc').textContent = isRu ? 'журнал для авторов до 18 лет · двуязычный · независимый' : 'a journal for writers under 18 · bilingual · independent';
+  document.getElementById('nav-issues').textContent = isRu ? 'выпуски' : 'issues';
+  document.getElementById('nav-guidance').textContent = isRu ? 'гайд' : 'guidance';
+  document.getElementById('nav-about').textContent = isRu ? 'о нас' : 'about';
+  document.getElementById('nav-submit').textContent = isRu ? 'подать' : 'submit';
+}
+function toggleLang() {
+  const current = localStorage.getItem('rd_lang') || 'en';
+  const next = current === 'en' ? 'ru' : 'en';
+  localStorage.setItem('rd_lang', next);
+  applyLang(next);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  const lang = localStorage.getItem('rd_lang') || 'en';
+  applyLang(lang);
+});
+</script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 let lang = localStorage.getItem('rd_lang') || 'en';
 function toggleLang() {
   lang = lang === 'en' ? 'ru' : 'en';
