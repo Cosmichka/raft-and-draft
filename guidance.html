@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guidance — Raft & Draft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Inter',sans-serif;background:#f0f6fb;color:#1a2a3a;}
+    .nav{background:#e8f3fb;border-bottom:1px solid #c5dff0;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:100;}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:20px;color:#2a6496;text-decoration:none;}
+    .nav-logo span{font-style:italic;color:#4a9bc8;}
+    .nav-links{display:flex;gap:1.5rem;align-items:center;}
+    .nav-links a{font-size:13px;color:#4a7a99;text-decoration:none;}
+    .nav-links a:hover{color:#2a6496;}
+    .nav-links a.active{color:#2a6496;font-weight:500;}
+    .lang-toggle{font-size:12px;color:#4a9bc8;border:1px solid #91c8e4;padding:3px 10px;border-radius:12px;cursor:pointer;background:transparent;font-family:'Inter',sans-serif;}
+    .page-hero{background:linear-gradient(150deg,#daeef9 0%,#eaf4fb 100%);padding:4rem 2.5rem 3rem;position:relative;overflow:hidden;}
+    .page-hero-wave{position:absolute;bottom:0;left:0;width:100%;height:50px;background:#f0f6fb;clip-path:ellipse(55% 100% at 50% 100%);}
+    .page-tag{display:inline-block;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#4a9bc8;background:#c8e4f5;padding:4px 14px;border-radius:20px;margin-bottom:1.2rem;}
+    .page-title{font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:#1a3a52;line-height:1.1;}
+    .page-title em{color:#4a9bc8;font-style:italic;}
+    .wave-divider{height:48px;background:#f0f6fb;}
+    .guidance-wrap{max-width:720px;margin:0 auto;padding:3rem 2.5rem 5rem;}
+    .g-section{margin-bottom:3rem;}
+    .g-title{font-family:'Playfair Display',serif;font-size:22px;color:#1a3a52;margin-bottom:1rem;}
+    .g-title em{color:#4a9bc8;font-style:italic;}
+    .g-body{font-size:15px;color:#4a6a8a;line-height:1.85;font-weight:300;}
+    .g-body p{margin-bottom:0.8rem;}
+    .g-specs{margin-top:1rem;display:flex;flex-direction:column;gap:10px;}
+    .g-spec{background:white;border:0.5px solid #c5dff0;border-radius:12px;padding:0.9rem 1.2rem;display:flex;justify-content:space-between;align-items:center;font-size:14px;}
+    .g-spec-type{color:#1a3a52;font-weight:500;}
+    .g-spec-limit{color:#7ab4cc;}
+    .divider{height:1px;background:#d4ecf7;margin:3rem 0;}
+    .submit-cta{background:linear-gradient(140deg,#c8e8f7 0%,#daeef9 100%);border-radius:16px;padding:2.5rem;text-align:center;margin-top:3rem;}
+    .submit-cta h3{font-family:'Playfair Display',serif;font-size:26px;color:#1a3a52;margin-bottom:0.8rem;}
+    .submit-cta p{font-size:14px;color:#5a849e;margin-bottom:1.5rem;line-height:1.7;}
+    .btn-primary{background:#3a8fc4;color:white;border:none;padding:11px 26px;border-radius:30px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:none;display:inline-block;}
+    .btn-primary:hover{background:#2a7fb4;}
+    .footer{background:#1a3a52;color:#7ab4cc;padding:2.5rem 2rem;text-align:center;font-size:12px;letter-spacing:0.04em;}
+    .footer-logo{font-family:'Playfair Display',serif;font-size:18px;color:#91c8e4;margin-bottom:0.8rem;}
+    .footer-contacts{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem;}
+    .footer-contacts a{color:#91c8e4;text-decoration:none;font-size:13px;}
+    .footer-contacts a:hover{color:#b5d9ee;}
+    .footer-contacts span{color:#4a6a7a;font-size:13px;}
+    @media(max-width:640px){
+      .page-title{font-size:36px;}
+      .guidance-wrap{padding:2rem 1.5rem 4rem;}
+      .g-spec{flex-direction:column;align-items:flex-start;gap:4px;}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Raft <span>&</span> Draft</a>
+  <div class="nav-links">
+    <a href="index.html#issues" id="nav-issues">issues</a>
+    <a href="guidance.html" class="active" id="nav-guidance">guidance</a>
+    <a href="about.html" id="nav-about">about</a>
+    <a href="index.html#submit" id="nav-submit">submit</a>
+    <button class="lang-toggle" onclick="toggleLang()" id="lang-btn">RU</button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-tag" id="page-tag">submission guidelines</div>
+  <div class="page-title" id="page-title">How to <em>submit</em></div>
+  <div class="page-hero-wave"></div>
+</div>
+
+<div class="wave-divider"></div>
+
+<div class="guidance-wrap">
+
+  <!-- WHAT WE'RE LOOKING FOR -->
+  <div class="g-section">
+    <div class="g-title" id="g-title-1">What we're <em>looking for</em></div>
+    <div class="g-body" id="g-body-1-en">
+      <p>We want to read work that the author wrote because they needed to, not because they were trying to impress anyone. The kind of text where you can feel that the person behind it genuinely loves what they made. Where the voice is theirs, not borrowed from what they think good writing should sound like.</p>
+      <p>If you wrote something and thought "I don't know if anyone will get this" that's probably exactly what we want to read.</p>
+    </div>
+    <div class="g-body" id="g-body-1-ru" style="display:none;">
+      <p>Мы хотим читать работы, которые автор написал потому что ему это было нужно, а не потому что он хотел понравиться. Тексты, в которых чувствуется, что человек за ними по-настоящему любит то, что создал. Где голос принадлежит именно ему, а не тому, каким, по его мнению, должно быть хорошее письмо.</p>
+      <p>Если ты написал что-то и подумал "не знаю, поймёт ли кто-нибудь" — скорее всего, именно это мы и хотим прочитать.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- WHAT WE ACCEPT -->
+  <div class="g-section">
+    <div class="g-title" id="g-title-2">What we <em>accept</em></div>
+    <div class="g-body" id="g-body-2-en">
+      <p>We accept work in Russian and English from writers under 18. All submissions are free.</p>
+    </div>
+    <div class="g-body" id="g-body-2-ru" style="display:none;">
+      <p>Принимаем работы на русском и английском языках от авторов до 18 лет. Подача бесплатна.</p>
+    </div>
+    <div class="g-specs">
+      <div class="g-spec">
+        <span class="g-spec-type" id="spec-prose-label">Prose</span>
+        <span class="g-spec-limit" id="spec-prose-limit">up to 5,000 words</span>
+      </div>
+      <div class="g-spec">
+        <span class="g-spec-type" id="spec-poetry-label">Poetry</span>
+        <span class="g-spec-limit" id="spec-poetry-limit">up to 60 lines</span>
+      </div>
+      <div class="g-spec">
+        <span class="g-spec-type" id="spec-script-label">Screenwriting</span>
+        <span class="g-spec-limit" id="spec-script-limit">up to 10 pages</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- WHAT WE DON'T ACCEPT -->
+  <div class="g-section">
+    <div class="g-title" id="g-title-3">What we <em>don't</em> accept</div>
+    <div class="g-body" id="g-body-3-en">
+      <p>Previously published work, including anything posted on blogs or social media.</p>
+      <p>AI-generated text. We are fine with AI as an editing tool, but the writing itself has to be entirely yours.</p>
+    </div>
+    <div class="g-body" id="g-body-3-ru" style="display:none;">
+      <p>Ранее опубликованные работы, в том числе всё, что было размещено в блогах или социальных сетях.</p>
+      <p>Текст, созданный ИИ. Мы не против использования ИИ как инструмента редактуры, но сама работа должна быть полностью твоей.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SIMULTANEOUS SUBMISSIONS -->
+  <div class="g-section">
+    <div class="g-title" id="g-title-4"><em>Simultaneous</em> submissions</div>
+    <div class="g-body" id="g-body-4-en">
+      <p>We accept them. If your work gets picked up somewhere else first, just let us know as soon as possible.</p>
+    </div>
+    <div class="g-body" id="g-body-4-ru" style="display:none;">
+      <p>Мы принимаем их. Если твою работу приняли в другом месте раньше, просто сообщи нам как можно скорее.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- HOW IT WORKS -->
+  <div class="g-section">
+    <div class="g-title" id="g-title-5">How it <em>works</em></div>
+    <div class="g-body" id="g-body-5-en">
+      <p>Fill out the submission form and attach your work as a PDF or DOCX file. We read everything and get back to you within 4 weeks. If we pass on your work, we will tell you why. Feedback is part of the deal.</p>
+    </div>
+    <div class="g-body" id="g-body-5-ru" style="display:none;">
+      <p>Заполни форму подачи и прикрепи работу в формате PDF или DOCX. Мы читаем всё и отвечаем в течение 4 недель. Если мы не возьмём работу, мы объясним почему. Фидбек — часть процесса.</p>
+    </div>
+  </div>
+
+  
+  <div class="divider"></div>
+
+  <div class="g-section" id="policy-section">
+    <div class="g-title" id="g-title-policy">Journal <em>policy</em></div>
+    <div class="g-body" id="g-body-policy-en">
+      <p><strong style="color:#1a3a52;font-weight:500;">1. About the journal.</strong> Raft & Draft is an independent literary journal for writers under 18. We publish prose, poetry, and screenwriting in Russian and English. Submission is always free.</p>
+      <p><strong style="color:#1a3a52;font-weight:500;">2. Copyright.</strong> The author retains all rights to their work. By submitting to Raft & Draft, the author grants the journal the right to publish the work once in online format. The journal does not claim exclusive rights and does not use works for commercial purposes.</p>
+      <p><strong style="color:#1a3a52;font-weight:500;">3. Eligibility.</strong> Submissions are open to authors aged 18 and under. By submitting, the author confirms they are the sole author of the work and that it is an original piece.</p>
+      <p><strong style="color:#1a3a52;font-weight:500;">4. Simultaneous submissions.</strong> We accept them. If your work is accepted elsewhere first, please notify us as soon as possible by email.</p>
+      <p><strong style="color:#1a3a52;font-weight:500;">5. Editorial decisions.</strong> The editorial team reserves the right to decline a submission without explanation. All decisions are final. We aim to respond to all submissions within 4 weeks.</p>
+      <p><strong style="color:#1a3a52;font-weight:500;">6. Personal data.</strong> Information provided in the submission form (name, email, phone) is used solely for communication with the author as part of the editorial process and is not shared with third parties.</p>
+      <p><strong style="color:#1a3a52;font-weight:500;">7. Contact.</strong> For any questions, write to cosmi28lol257@gmail.com</p>
+    </div>
+    <div class="g-body" id="g-body-policy-ru" style="display:none;">
+      <p><strong style="color:#1a3a52;font-weight:500;">1. Об издании.</strong> Raft & Draft — независимый литературный журнал для авторов до 18 лет. Журнал публикует прозу, поэзию и сценарии на русском и английском языках. Публикация в журнале бесплатна для авторов.</p>
+      <p><strong style="color:#1a3a52;font-weight:500;">2. Авторские права.</strong> Автор сохраняет все права на свою работу. Публикуя текст в Raft & Draft, автор предоставляет журналу право на однократную публикацию в онлайн-формате. Журнал не претендует на исключительные права и не использует работы в коммерческих целях.</p>
+      <p><strong style="color:#1a3a52;font-weight:500;">3. Требования к участникам.</strong> К подаче допускаются авторы в возрасте до 18 лет включительно. Подавая работу, автор подтверждает, что является её единственным автором и что текст является оригинальным произведением.</p>
+      <p><strong style="color:#1a3a52;font-weight:500;">4. Одновременные подачи.</strong> Мы принимаем их. Если работа была принята в другое издание раньше, просим уведомить нас как можно скорее по электронной почте.</p>
+      <p><strong style="color:#1a3a52;font-weight:500;">5. Редакционные решения.</strong> Редакция оставляет за собой право отклонить работу без объяснения причин. Все решения окончательны. Мы стараемся отвечать на все заявки в течение 4 недель.</p>
+      <p><strong style="color:#1a3a52;font-weight:500;">6. Персональные данные.</strong> Данные, указанные в форме подачи (имя, почта, телефон), используются исключительно для связи с автором в рамках редакционного процесса и не передаются третьим лицам.</p>
+      <p><strong style="color:#1a3a52;font-weight:500;">7. Контакты.</strong> По всем вопросам пишите на cosmi28lol257@gmail.com</p>
+    </div>
+  </div>
+
+  <div class="submit-cta">
+    <h3 id="cta-title">Ready to submit?</h3>
+    <p id="cta-desc">Fill out the form and share your work with us.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKL0W-uNZ7PUDgZoWYnVMaARBgQnxY4mrbmILQDD5bpYpnFw/viewform" target="_blank" class="btn-primary" id="cta-btn">Submit now →</a>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-logo">Raft & Draft</div>
+  <p style="margin-bottom:1.2rem;" id="footer-desc">a journal for writers under 18 · bilingual · independent</p>
+  <div class="footer-contacts">
+    <a href="/cdn-cgi/l/email-protection#caa9a5b9a7a3f8f2a6a5a6f8fffd8aada7aba3a6e4a9a5a7"><span class="__cf_email__" data-cfemail="61020e120c0853590d0e0d53545621060c00080d4f020e0c">[email&#160;protected]</span></a>
+    <span>TikTok: @radjournal</span>
+    <a href="https://t.me/raft_and_raft" target="_blank">Telegram: @raft_and_raft</a>
+  </div>
+  <p style="color:#4a6a7a;">© 2026 Raft & Draft · founded by Косми · Moscow</p>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+let lang = 'en';
+function toggleLang() {
+  lang = lang === 'en' ? 'ru' : 'en';
+  const isRu = lang === 'ru';
+  document.getElementById('lang-btn').textContent = isRu ? 'EN' : 'RU';
+  document.getElementById('page-tag').textContent = isRu ? 'как подать работу' : 'submission guidelines';
+  document.getElementById('page-title').innerHTML = isRu ? 'Как <em>подать</em>' : 'How to <em>submit</em>';
+  document.getElementById('g-title-1').innerHTML = isRu ? 'Что мы <em>ищем</em>' : 'What we\'re <em>looking for</em>';
+  document.getElementById('g-title-2').innerHTML = isRu ? 'Что мы <em>принимаем</em>' : 'What we <em>accept</em>';
+  document.getElementById('g-title-3').innerHTML = isRu ? 'Что мы <em>не принимаем</em>' : 'What we <em>don\'t</em> accept';
+  document.getElementById('g-title-4').innerHTML = isRu ? '<em>Одновременные</em> подачи' : '<em>Simultaneous</em> submissions';
+  document.getElementById('g-title-5').innerHTML = isRu ? 'Как это <em>работает</em>' : 'How it <em>works</em>';
+  ['1','2','3','4','5'].forEach(n => {
+    document.getElementById('g-body-'+n+'-en').style.display = isRu ? 'none' : 'block';
+    document.getElementById('g-body-'+n+'-ru').style.display = isRu ? 'block' : 'none';
+  });
+  document.getElementById('spec-prose-label').textContent = isRu ? 'Проза' : 'Prose';
+  document.getElementById('spec-prose-limit').textContent = isRu ? 'до 5 000 слов' : 'up to 5,000 words';
+  document.getElementById('spec-poetry-label').textContent = isRu ? 'Поэзия' : 'Poetry';
+  document.getElementById('spec-poetry-limit').textContent = isRu ? 'до 60 строк' : 'up to 60 lines';
+  document.getElementById('spec-script-label').textContent = isRu ? 'Сценарий' : 'Screenwriting';
+  document.getElementById('spec-script-limit').textContent = isRu ? 'до 10 страниц' : 'up to 10 pages';
+  document.getElementById('cta-title').textContent = isRu ? 'Готов подать работу?' : 'Ready to submit?';
+  document.getElementById('cta-desc').textContent = isRu ? 'Заполни форму и поделись своей работой с нами.' : 'Fill out the form and share your work with us.';
+  document.getElementById('cta-btn').textContent = isRu ? 'Подать работу →' : 'Submit now →';
+  document.getElementById('footer-desc').textContent = isRu ? 'журнал для авторов до 18 лет · двуязычный · независимый' : 'a journal for writers under 18 · bilingual · independent';
+  document.getElementById('nav-issues').textContent = isRu ? 'выпуски' : 'issues';
+  document.getElementById('nav-guida
